@@ -2368,7 +2368,7 @@ FileETag none
         fclose($write_fd);
 
         if (!defined('PS_INSTALLATION_IN_PROGRESS')) {
-            Hook::exec('actionHtaccessCreate');
+            Hook::exec('actionHtaccessCreate', ['path' => $path]);
         }
 
         return true;
